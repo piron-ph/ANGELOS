@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+body {
+  background-color: #121212;
+}
+p {
+  color: white;
+  font-size: 34px;
+  margin-right: 300px;
+  margin-left: 300px;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+*,
+*:focus{outline: none}
+.form-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: formodule 12s linear forwards;
+}
+@keyframes formodule {
+    from {
+      opacity: 0;
+      bottom: 0;
+    }
+    to {
+      opacity: 1;
+      bottom: 100;
+    }
+}
+form {
+
+}
+label {
+    transition: all .9s ease;
+    color: #fff;
+    pointer-events: none;
+    font-size: 30px;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+input {
+    background: #121212;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding-left: 9px;
+    width: 100%;
+    height: 50px;
+}
+input:focus+label,
+input:valid+label{
+
+}
+input[type=password] {
+    color: white;
+    font-size: 20px;
+}
+.line {
+  display:block;
+  position:relative;
+  border-bottom:4px solid white;
+  width:0%;
+  text-align:center;
+  animation: line 2s linear forwards;
+  margin-top: 10px;
+}
+@keyframes line {
+  from {
+    left:50%;
+    width:0%;
+  }
+  to {
+    left:5%;
+    width:90%;
+  }
+}
+.line2 {
+  display:block;
+  position:relative;
+  border-bottom:4px solid white;
+  width:0%;
+  text-align:center;
+  animation: line2 2s linear forwards;
+  margin-top: 10px;
+}
+@keyframes line2 {
+  from {
+    left:50%;
+    width:0%;
+  }
+  to {
+    left:15%;
+    width:70%;
+  }
+}
+#wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.intro-container {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav-container {
+  padding: 100px;
+  border: white solid 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.words-list {
+  text-align: center;
+  font-family: 'times new roman';
+  font-size: 20px;
+}
+#spin {
+  color:red;
+}
+#spin:after {
+  content:"";
+  animation: spin 15s normal;
+  animation-fill-mode: forwards;
+}
+@keyframes spin {
+  0% { content:"Of who you are"; }
+  10% { content:"Of your efflorecent beauty"; }
+  20% { content:"Of your imperfections"; }
+  30% { content:"You make me smile"; }
+  40% { content:"You are the reason im happy waking up"; }
+  50% { content: "You make me soft"; }
+  60% { content: "You make me comfortable"; }
+  70% { content: "I love hearing your voice"; }
+  80% { content: "I love when you are with me"; }
+  90% { content: "You are perfect"; }
+  100% { content: "Of you"; }
+}
+#We-love {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    margin: 400px;
+
+    -webkit-animation: fadein 3s forwards; 
+       -moz-animation: fadein 3s forwards; 
+        -ms-animation: fadein 3s forwards; 
+         -o-animation: fadein 3s forwards; 
+            animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+#We-Want {
+    margin-top: 25px;
+    font-size: 55px;
+    text-align: center;
+
+    -webkit-animation: We-love 15s forwards;
+       -moz-animation: We-love 15s forwards; 
+        -ms-animation: We-love 15s forwards; 
+         -o-animation: We-love 15s forwards; 
+            animation: We-love 15s forwards;
+}
+
+@keyframes We-love {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes We-love {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes We-love {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes We-love {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes We-love {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.we-but {
+  background-color:#2e2e2e;
+  border-radius:10px;
+  border:1px solid #2e2e2e;
+  display:inline-block;
+  cursor:pointer;
+  color: #2e2e2e;
+  font-family:Arial;
+  font-size:10px;
+  padding:5px 2px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2e2e2e;
+}
+.we-but:hover {
+  background-color:#212121;
+}
+.we-but:active {
+  position:relative;
+  top:1px;
+}

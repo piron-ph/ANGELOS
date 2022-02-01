@@ -2,8 +2,18 @@
 
 
 cls
-title ANGELOS
 ping localhost -n 5 >nul
+echo Checking for update
+ping localhost -n 5 >nul
+cls
+set currentver=v1
+IF %errorlevel% EQU 1 goto begin
+call updater.bat
+
+:begin
+cls
+title ANGELOS
+ping localhost -n 5 >nul b
 
 echo Connecting to ANGELOS
 
@@ -123,7 +133,39 @@ goto:selector
     goto :eof
 
 
-:Webot
+:selector
+echo Please type where you want to go
+echo.
+echo. 
+echo 1) Our Journey
+echo 2) Messag
+echo.
+set /p op=Type option:
+if "%op%"=="1" call journey/journey.bat
+if "%op%"=="2" call ily/ily.bat
+if "%op%"=="3" goto 4
+if "%op%"=="4"
+if "%op%"=="5"
+if "%op%"=="6"
+if "%op%"=="7"
+
+echo Please Pick an option:
+goto begin
+
+
+:0
+echo you picked option 1
+goto begin
+
+:1
+echo you picked option 2
+goto begin
+
+:loader 
+echo 
+
+:4
+cls
 ping localhost -n 5 >nul
 echo i have never really thought on how to start this
 ping localhost -n 5 >nul
@@ -154,30 +196,15 @@ ping localhost -n 5 >nul
 echo.
 echo.
 echo You are, and always have been, My dream.
-goto loader
+:choice
+set /P c=This message has part 2, continue [Y/N]?
+if /I "%c%" EQU "Y" goto :4cont
+if /I "%c%" EQU "N" goto :selector
+goto :selector
+echo selector not working.
+goto :choice
+:4cont
+echo
 
-:selector
-echo Please type where you want to go
-echo 
-echo 
-echo 1) Last message
-echo 2) New message
-echo 
-set /p op=Type option:
-if "%op%"=="1" goto 0
-if "%op%"=="2" goto 1
-
-echo Please Pick an option:
-goto begin
-
-
-:0
-echo you picked option 1
-goto begin
-
-:1
-echo you picked option 2
-goto begin
-
-:loader 
-echo 
+:5
+echo
